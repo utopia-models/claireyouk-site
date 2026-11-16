@@ -26,7 +26,7 @@ export default function Stats() {
     <dl ref={ref} className="stats">
       {STATS.map((s) => (
         <div key={s.label} className="stat">
-          <dt className="stat-num">
+          <dt className="stat-num" data-shown={shown ? s.value : 0}>
             <NumberFlow value={shown ? s.value : 0} suffix={s.suffix} format={{ useGrouping: true }} willChange />
           </dt>
           <dd className="stat-label">{s.label}</dd>

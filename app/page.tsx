@@ -72,6 +72,9 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </section>
+
+        <section className="stats-band" aria-label="By the numbers">
           <div className="wrap">
             <Stats />
           </div>
@@ -80,7 +83,7 @@ export default function Home() {
         <section id="focus" className="band marble-2" aria-labelledby="focus-h">
           <div className="wrap">
             <p className="eyebrow ink">Focus</p>
-            <h2 id="focus-h" className="split-h2">What she is looking for, <em>summer 2027.</em></h2>
+            <h2 id="focus-h" className="split-h2">What she is looking for in summer 2027</h2>
             <ol className="focus">
               {FOCUS.map((f) => (
                 <li key={f.title} className="focus-item" data-reveal>
@@ -97,7 +100,7 @@ export default function Home() {
           <div className="wrap two-col">
             <div className="sticky-head">
               <p className="eyebrow ink">Experience</p>
-              <h2 id="exp-h" className="split-h2">Work and <em>service.</em></h2>
+              <h2 id="exp-h" className="split-h2">Work and service</h2>
               <a className="text-link" href="/resume">Full resume →</a>
             </div>
             <div>
@@ -112,7 +115,7 @@ export default function Home() {
           <div className="wrap two-col">
             <div className="sticky-head">
               <p className="eyebrow ink">Education &amp; honors</p>
-              <h2 id="edu-h" className="split-h2">Education <em>and honors.</em></h2>
+              <h2 id="edu-h" className="split-h2">Education and honors</h2>
             </div>
             <div>
               <ul className="edu">
@@ -143,7 +146,7 @@ export default function Home() {
           <div className="wrap resume-cta" data-reveal>
             <div>
               <p className="eyebrow ink">Resume</p>
-              <h2 id="resume-h" className="split-h2">The one-page <em>resume.</em></h2>
+              <h2 id="resume-h" className="split-h2">The one‑page resume</h2>
               <p className="muted">Read it on the page or download the PDF. A hospitality version for server and host roles is also available.</p>
             </div>
             <div className="resume-actions">
@@ -166,7 +169,7 @@ export default function Home() {
           <div className="wrap two-col">
             <div>
               <p className="eyebrow">Contact</p>
-              <h2 id="contact-h" className="split-h2 on-dusk">Get in <em>touch.</em></h2>
+              <h2 id="contact-h" className="split-h2 on-dusk">Get in touch</h2>
               <p className="on-dusk-muted">For internships, roles and introductions. Messages go straight to Claire’s inbox.</p>
               <ul className="contact-links">
                 <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>

@@ -28,7 +28,7 @@
   --size-body: 1.0625rem;
   --size-small: 0.875rem;
   --size-eyebrow: 0.8125rem;
-  --size-stat: clamp(2.75rem, 5.5vw, 4.75rem);
+  --size-stat: clamp(2.25rem, 4.2vw, 3.75rem);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;

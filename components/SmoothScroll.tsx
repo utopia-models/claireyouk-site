@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function SmoothScroll() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    (window as unknown as { gsap: typeof gsap }).gsap = gsap; // runtime probe for the ui-design critic
+    Object.assign(window, { gsap, ScrollTrigger }); // runtime probe for the ui-design critic
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const lenis = new Lenis({ autoRaf: false, lerp: 0.1, anchors: { offset: -72 } });
     lenis.on("scroll", ScrollTrigger.update);

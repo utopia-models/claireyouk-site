@@ -26,8 +26,8 @@ export default function Nav({ solid = false }: { solid?: boolean }) {
           {LINKS.map(([l, h]) => <a key={h} href={h}>{l}</a>)}
         </nav>
         <div className="nav-actions">
-          <a className="nav-pill" href="/resume">Resume</a>
-          <a className="nav-pill nav-pill-solid" href="/#contact">Contact</a>
+          <a className="nav-pill nav-pill-solid" href="/resume">Resume</a>
+          <a className="nav-pill" href="/#contact">Contact</a>
         </div>
       </div>
     </header>

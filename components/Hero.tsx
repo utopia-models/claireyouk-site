@@ -70,7 +70,7 @@ export default function Hero() {
 
         <div className="hero-inner wrap">
           <div className="hero-copy">
-            <p className="eyebrow hero-fade">Political Science · UC Santa Barbara · Pre‑law</p>
+            <p className="eyebrow hero-fade">Political Science · UC Santa Barbara · Pre‑law</p>
             <h1 id="hero-name" className="hero-name">Claire Youk</h1>
             <p className="hero-lede hero-fade">
               Pre-law student and former student representative to Fairfax County Public Schools leadership.

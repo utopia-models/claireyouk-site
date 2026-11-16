@@ -13,8 +13,8 @@ gsap.registerPlugin(SplitText, useGSAP);
 const DUSK = ["#0b1430", "#1f2b66", "#6b5fc7", "#ef8f84", "#0b1430", "#f6cdb9"];
 
 // Arch outline in a 100 × 130 box: two straight jambs and a semicircular head, like a courthouse window.
-const ARCH = "M 2 128 L 2 50 A 48 48 0 0 1 98 50 L 98 128";
-const ARCH_OUTER = "M -4 134 L -4 50 A 54 54 0 0 1 104 50 L 104 134";
+const ARCH = "M -3 118 L -3 50 A 53 53 0 0 1 103 50 L 103 118";
+const ARCH_OUTER = "M -8 104 L -8 50 A 58 58 0 0 1 108 50 L 108 104";
 
 export default function Hero() {
   const root = useRef<HTMLElement>(null);
@@ -35,7 +35,7 @@ export default function Hero() {
     () => {
       const mm = gsap.matchMedia();
       mm.add("(prefers-reduced-motion: no-preference)", () => {
-        const split = SplitText.create(".hero-name", { type: "chars", mask: "chars" });
+        const split = SplitText.create(".hero-name", { type: "words,chars", mask: "chars" });
         gsap.timeline({ defaults: { ease: "expo.out" } })
           .from(split.chars, { yPercent: 115, stagger: 0.045, duration: 1.1 })
           .from(".hero-fade", { opacity: 0, y: 14, filter: "blur(8px)", stagger: 0.09, duration: 0.8 }, "-=0.7")
@@ -82,9 +82,9 @@ export default function Hero() {
             <div className="arch">
               <img src="/claire-youk.jpg" alt="Claire Youk" width={800} height={800} fetchPriority="high" />
             </div>
-            <svg className="arch-line" viewBox="-6 -6 112 142" preserveAspectRatio="none" aria-hidden="true">
-              <motion.path d={ARCH} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1], delay: 0.4 }} />
-              <motion.path className="outer" d={ARCH_OUTER} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2.6, ease: [0.22, 1, 0.36, 1], delay: 0.7 }} />
+            <svg className="arch-line" viewBox="0 0 100 130" preserveAspectRatio="none" aria-hidden="true">
+              <motion.path d={ARCH} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.4 }} />
+              <motion.path className="outer" d={ARCH_OUTER} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.7 }} />
             </svg>
           </figure>
         </div>

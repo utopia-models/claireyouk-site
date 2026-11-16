@@ -1,6 +1,6 @@
 /* claireyouk.com — every value reads from tokens.generated.css (design/tokens.json). */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; overflow-x: clip; }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 body {
@@ -83,9 +83,8 @@ p { margin: 0 0 var(--space-4); text-wrap: pretty; }
 .hero-photo { order: 1; position: relative; margin: 0 auto; width: min(64vw, 280px); aspect-ratio: 100 / 130; }
 .arch { position: absolute; inset: 0; border-radius: var(--radius-arch); overflow: hidden; box-shadow: 0 40px 90px -30px #000000a6; }
 .arch img { width: 100%; height: 112%; object-fit: cover; object-position: 50% 30%; margin-top: -6%; }
-.arch-line { position: absolute; inset: -5%; width: 110%; height: 110%; overflow: visible; pointer-events: none; }
-.arch-line path { fill: none; stroke: var(--color-dusk-peach); stroke-width: 0.5; vector-effect: non-scaling-stroke; }
-.arch-line path { stroke-width: 1.25px; }
+.arch-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.arch-line path { fill: none; stroke: var(--color-dusk-peach); stroke-width: 1.25px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
 .arch-line .outer { stroke: var(--color-on-dusk-muted); opacity: 0.55; }
 .hero-scroll { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); width: 44px; height: 44px; display: grid; place-items: center; }
 .hero-scroll span { width: 1px; height: 32px; background: linear-gradient(var(--color-on-dusk), transparent); animation: none; }
@@ -174,7 +173,8 @@ p { margin: 0 0 var(--space-4); text-wrap: pretty; }
 @media (min-width: 900px) { .resume-cta { grid-template-columns: 1.2fr 1fr; } .resume-cta .resume-actions { justify-content: flex-end; } }
 
 /* video slot */
-.video-slot { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-glass-line); isolation: isolate; min-height: 260px; }
+.video-slot { position: relative; aspect-ratio: 4 / 5; width: 100%; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-glass-line); isolation: isolate; }
+@media (min-width: 640px) { .video-slot { aspect-ratio: 16 / 9; } }
 .video-shader { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 .video-copy { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-5); background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--color-dusk-midnight) 45%, transparent), transparent 70%); }
 .video-face { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px solid var(--color-glass-line); margin-bottom: var(--space-4); }

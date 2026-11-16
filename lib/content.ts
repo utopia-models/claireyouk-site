@@ -17,8 +17,8 @@ export const SITE = {
 } as const;
 
 export const STATS = [
-  { value: 181000, suffix: "+", label: "students under the county school policies she gave feedback on" },
-  { value: 3000, suffix: "+", label: "classmates she represented at the county level" },
+  { value: 3000, suffix: "+", label: "classmates she represented on the county Student Advisory Council, 1 of 3 chosen" },
+  { value: 70, suffix: "+", label: "student leaders she recruited into her school’s leadership program" },
   { value: 130, suffix: "+", label: "children ages 3–14 she has taught" },
   { value: 65, suffix: "", label: "community shows performed, 33 of them sold out" },
 ] as const;

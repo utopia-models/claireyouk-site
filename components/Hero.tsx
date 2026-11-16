@@ -47,7 +47,7 @@ export default function Hero() {
       mm.add("(prefers-reduced-motion: no-preference)", () => {
         const split = SplitText.create(".hero-name", { type: "words,chars", mask: "chars" });
         gsap.timeline({ defaults: { ease: "expo.out" } })
-          .from(split.chars, { yPercent: 115, stagger: 0.04, duration: 1 })
+          .from(split.chars, { yPercent: 115, stagger: 0.04, duration: 1, onComplete: () => split.revert() })
           .from(".hero-fade", { opacity: 0, y: 14, filter: "blur(8px)", stagger: 0.08, duration: 0.7 }, "-=0.7")
           .from(".hero-photo .arch", { opacity: 0, scale: 1.05, duration: 1.2, ease: "power3.out" }, 0.1)
           .from(".hero-rays", { opacity: 0, duration: 1.6, ease: "power2.out" }, 0.3);

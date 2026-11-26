@@ -1,0 +1,12 @@
+// claireyouk.com on Cloudflare Workers via @opennextjs/cloudflare (knowledge#19515).
+// Secret CONTACT_SA_JSON_B64 comes from Infisical fleet-infra CLAIREYOUK_CONTACT_SA_JSON_B64
+// (`wrangler secret put`), never written here.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "claireyouk-site",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "observability": { "enabled": true }
+}

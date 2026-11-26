@@ -1,7 +1,11 @@
-node_modules
-.next
-out
-.vercel
-*.tsbuildinfo
-next-env.d.ts
 .env*
+.next
+.next/
+next-env.d.ts
+node_modules
+node_modules/
+.open-next/
+out
+*.tsbuildinfo
+.vercel
+.wrangler/
